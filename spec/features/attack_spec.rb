@@ -3,6 +3,7 @@ feature 'players attack' do
     sign_in_and_play
     visit '/play'
     click_on 'Attack player'
-    expect(page).to have_content 'Luca attacked Tomas'
+    expect(page).not_to have_content 'Cesare: 100HP'
+    expect(page).to have_content 'Cesare: 90HP'
   end
 end

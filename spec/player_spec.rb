@@ -12,15 +12,20 @@ describe Player do
 
   describe '#health_points' do
     it 'returns the player\'s HP' do
-      expect(luca.health_points).to eq 100
+      expect(luca.hp).to eq Player::HP
     end
   end
 
   describe '#attack' do
-    it { expect(luca).to respond_to(:attack).with(1).argument}
-    # it 'returns the player\'s HP - 10' do
-    #   luca.
-    #   expect(luca.health_points).to eq 90
-    # end
+    it 'returns the player\'s HP - 10' do
+      expect(cesare).to receive(:receive_damage)
+      luca.attack(cesare)
+    end
+  end
+
+  describe '#receive_damage' do
+    it 'reduces the player\'s HP by 10' do
+      expect {cesare.receive_damage }.to change { cesare.hp }.by(-10)
+    end
   end
 end
