@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'shotgun'
+require 'player'
 
 class Battle < Sinatra::Base
 
