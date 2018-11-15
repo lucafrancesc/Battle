@@ -1,5 +1,4 @@
 require 'player'
-
 describe Player do
   subject(:luca) { Player.new('Luca') }
   subject(:cesare) { Player.new('Cesare') }
@@ -13,13 +12,6 @@ describe Player do
   describe '#health_points' do
     it 'returns the player\'s HP' do
       expect(luca.hp).to eq Player::HP
-    end
-  end
-
-  describe '#attack' do
-    it 'returns the player\'s HP - 10' do
-      expect(cesare).to receive(:receive_damage)
-      luca.attack(cesare)
     end
   end
 
