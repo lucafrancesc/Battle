@@ -27,5 +27,10 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
+  get '/lost_page' do
+    @game = $game
+    erb :lost_page
+  end
+
   run! if app_file == $0
 end

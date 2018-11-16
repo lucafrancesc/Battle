@@ -9,7 +9,7 @@ class Game
   end
 
   def attack(player)
-    player.receive_damage
+    player.lost? ? 'You lost' : player.receive_damage
   end
 
   def switch_player
@@ -21,8 +21,26 @@ end
 # p1 = Player.new 'luca'
 # p2 = Player.new 'cesare'
 # g = Game.new(p1, p2)
+#
 # p g.current_player
 # g.switch_player
 # p g.current_player
-# g.switch_player
+# puts
+# g.attack(g.switch_player)
 # p g.current_player
+# puts
+# g.attack(g.switch_player)
+# p g.current_player
+# puts
+# g.attack(g.switch_player)
+# p g.current_player
+# puts
+# g.attack(g.switch_player)
+# p g.current_player
+# puts
+#
+# p g.attack(g.switch_player)
+# p g.current_player
+# g.attack(g.switch_player)
+# p g.current_player
+# puts

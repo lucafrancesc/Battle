@@ -20,4 +20,11 @@ describe Player do
       expect {cesare.receive_damage }.to change { cesare.hp }.by(-10)
     end
   end
+
+  describe '#lost?' do
+    it 'returnes true if the HP are 0' do
+      allow(luca).to receive(:hp).and_return(0)
+      expect(luca.lost?).to eq true
+    end
+  end
 end

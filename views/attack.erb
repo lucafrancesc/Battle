@@ -11,3 +11,7 @@
 <center><form action="/attack" method="get">
   <input type="submit" value="Attack player">
 </form></center>
+
+<% if @game.current_player.lost? %>
+<% redirect '/lost_page'%>
+<% end%>

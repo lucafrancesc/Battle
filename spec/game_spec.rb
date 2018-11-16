@@ -7,7 +7,8 @@ describe Game do
   subject(:game){ described_class.new(luca, cesare)}
 
   describe '#attack' do
-    it 'returns the player\'s HP - 10' do
+    it 'returns You lost' do
+      expect(cesare).to receive(:lost?)
       expect(cesare).to receive(:receive_damage)
       game.attack(cesare)
     end

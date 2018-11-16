@@ -11,4 +11,8 @@ class Player
     @hp -= 10
   end
 
+  def lost?
+    self.hp <= 0
+  end
+
 end

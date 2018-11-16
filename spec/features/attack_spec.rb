@@ -2,7 +2,6 @@ feature 'players attack' do
 
   before do
       sign_in_and_play
-      # visit '/play'
       click_on 'Attack player'
     end
   scenario "confirm the player's attack" do
