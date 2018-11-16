@@ -1,4 +1,5 @@
 class Player
+  
   attr_reader :name, :hp
 
   HP = 100

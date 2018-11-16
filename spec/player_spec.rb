@@ -1,5 +1,7 @@
 require 'player'
+
 describe Player do
+
   subject(:luca) { Player.new('Luca') }
   subject(:cesare) { Player.new('Cesare') }
 
@@ -27,4 +29,5 @@ describe Player do
       expect(luca.lost?).to eq true
     end
   end
+  
 end
